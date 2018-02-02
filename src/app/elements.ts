@@ -1,3 +1,7 @@
-export const DECLARATIONS = [];
+import { MatSlider, MatIcon } from '@angular/material';
 
-export const ENTRY_COMPONENTS = [];
+import { NNArtComponent } from './elements/nn-art/nn-art.component';
+
+export const DECLARATIONS = [NNArtComponent];
+
+export const ENTRY_COMPONENTS = [NNArtComponent];
