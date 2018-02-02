@@ -1,0 +1,7 @@
+<div class="paint-canvas-container">
+  <canvas #mnistCanvas (mousedown)="beginPaint($event)" (mouseup)="finishPaint($event)"></canvas>
+
+  <button class="clear-btn" (click)="clear()">
+    <mat-icon>refresh</mat-icon>
+  </button>
+</div>

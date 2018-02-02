@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
+
+/** Material */
+mat-slider {
+  width: 146px;
+}
+
+/** Main containers */
+
+.container {
+  color: #4a494a;
+
+  .controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+  }
+}
+
+.remove-me {
+  width: 100%;
+  padding: 300px 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+/** Generic */
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 130px;
+  margin: 6px 6px 6px 8px;
+  height: 25px;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ff4081;
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+}

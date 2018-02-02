@@ -1,0 +1,18 @@
+.paint-canvas-container {
+  margin: 40px 10px;
+  position: relative;
+  text-align: center;
+
+  canvas {
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 25px #6a6969;
+  }
+
+  .clear-btn {
+    position: absolute;
+    bottom: -10px;
+    right: -3px;
+    color: #ff4081;
+    text-shadow: 2px 1px 6px #838080;
+  }
+}

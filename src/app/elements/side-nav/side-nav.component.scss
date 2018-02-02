@@ -1,0 +1,35 @@
+.side-nav-container {
+  transform: translateX(280px);
+  transition: transform 1s;
+
+  .toggle-btn {
+    display: inline-block;
+    padding: 10px;
+    transition: transform 1s;
+    color: #dcd9dc;
+    opacity: 0.85;
+
+    mat-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+    }
+  }
+
+  // thank you @elmd_ !!
+  &:hover {
+    transform: translate(0);
+    .toggle-btn {
+      transform: scale(0.5) rotate(100deg);
+    }
+  }
+
+  .side-nav-body {
+    width: 250px;
+    height: 750px;
+    background-color: rgba(240, 238, 238, 0.85);
+    padding: 15px;
+    float: right;
+    box-shadow: -2px 2px 25px #525151;
+  }
+}
