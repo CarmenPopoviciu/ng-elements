@@ -1,0 +1,4 @@
+<paint-canvas [height]="height" [width]="width" [lineWidth]="lineWidth" clearable="true" (endPaint)="predict($event)" (cleared)="onCanvasClear()"></paint-canvas>
+<!--<canvas id="mnist"></canvas>-->
+
+<div class="predicted" *ngIf="predictedDigit || predictedDigit==0">Predicted value: {{predictedDigit}}</div>
