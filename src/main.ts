@@ -18,5 +18,16 @@ if (environment.production) {
 registerAsCustomElements(ENTRY_COMPONENTS, () =>
   platformBrowserDynamic().bootstrapModule(ElementsModule)
 )
-  .then(_ => {})
+  .then(_ => {
+    const nnArt = document.querySelector('nn-art');
+    const slider = document.querySelector('mat-slider');
+    const input = document.querySelector('input');
+
+    slider.addEventListener('change', (ev: CustomEvent) => {
+      nnArt.setAttribute('num-layers', ev.detail.value);
+    });
+    input.addEventListener('blur', (ev: Event) => {
+      nnArt.setAttribute('activation-fn', ev.target['value']);
+    });
+  })
   .catch(err => console.log(err));

@@ -14,6 +14,16 @@
 <body>
   <div class="container">
     <nn-art canvas-size="128" num-layers="7" activation-fn="tanh"></nn-art>
+
+    <div class="controls">
+      <side-nav>
+        <label>Layers</label>
+        <mat-slider min="0" max="10" step="1" value="3"></mat-slider>
+
+        <label>ActivationFn</label>
+        <input name="activation-fn">
+      </side-nav>
+    </div>
   </div>
 </body>
 
