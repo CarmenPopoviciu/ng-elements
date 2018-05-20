@@ -2,6 +2,9 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~@angular/material/theming';
 
+/** Variables */
+$dark-grey: #4a494a;
+
 /** Material */
 mat-slider {
   width: 146px;
@@ -10,7 +13,7 @@ mat-slider {
 /** Main containers */
 
 .container {
-  color: #4a494a;
+  color: $dark-grey;
 
   .controls {
     position: absolute;
@@ -38,10 +41,16 @@ input {
   margin: 6px 6px 6px 8px;
   height: 25px;
   font-size: 18px;
+  color: $dark-grey;
+
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #ff4081;
   outline: none;
+}
+
+input::placeholder {
+  font-size: 13px;
 }
 
 button {
