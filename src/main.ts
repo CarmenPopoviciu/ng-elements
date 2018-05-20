@@ -1,6 +1,5 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { registerAsCustomElements } from '@angular/elements';
 
 import { MatSlider, MatIcon } from '@angular/material';
 
@@ -15,9 +14,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-registerAsCustomElements(ENTRY_COMPONENTS, () =>
-  platformBrowserDynamic().bootstrapModule(ElementsModule)
-)
+platformBrowserDynamic()
+  .bootstrapModule(ElementsModule)
   .then(_ => {
     const nnArt = document.querySelector('nn-art');
     const slider = document.querySelector('mat-slider');
@@ -27,7 +25,7 @@ registerAsCustomElements(ENTRY_COMPONENTS, () =>
     slider.addEventListener('change', (ev: CustomEvent) => {
       nnArt.setAttribute('num-layers', ev.detail.value);
     });
-    input.addEventListener('blur', (ev: Event) => {
+    input.addEventListener('input', (ev: Event) => {
       nnArt.setAttribute('activation-fn', ev.target['value']);
     });
 
