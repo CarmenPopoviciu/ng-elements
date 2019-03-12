@@ -1,4 +1,4 @@
-# nnArt
+# ng-elements
 
 Based on https://deeplearnjs.org/demos/nn-art/
 
