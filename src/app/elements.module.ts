@@ -15,25 +15,31 @@ import { NNMnistComponent } from './elements/nn-mnist/nn-mnist.component';
 import { SideNavComponent } from './elements/side-nav/side-nav.component';
 import { PaintCanvasComponent } from './elements/paint-canvas/paint-canvas.component';
 
+import { TodoModule } from './elements/todo/todo.module';
+import { MyTodo } from './elements/todo/my-todo.component';
+
+
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    TodoModule,
   ],
   declarations: [
     NNArtComponent,
     NNMnistComponent,
     SideNavComponent,
-    PaintCanvasComponent
+    PaintCanvasComponent,
   ],
   entryComponents: [
     NNArtComponent,
     NNMnistComponent,
     SideNavComponent,
     MatSlider,
-    MatIcon
+    MatIcon,
+    MyTodo
   ]
 })
 export class ElementsModule {
@@ -53,11 +59,15 @@ export class ElementsModule {
       injector: this.injector
     });
     const matIconEl = createCustomElement(MatIcon, { injector: this.injector });
+    const todosEl = createCustomElement(MyTodo, {
+      injector: this.injector
+    });
 
     customElements.define('nn-art', nnArtEl);
     customElements.define('nn-mnist', nnMnistEl);
     customElements.define('side-nav', sideNavEl);
     customElements.define('mat-slider', matSliderEl);
     customElements.define('mat-icon', matIconEl);
+    customElements.define('my-todos', todosEl);
   }
 }

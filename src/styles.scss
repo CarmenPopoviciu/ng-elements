@@ -28,6 +28,12 @@ mat-slider {
   padding: 300px 0;
   font-size: 2em;
   text-align: center;
+} 
+
+my-todos {
+  position: absolute;
+  top: 0;
+  z-index: 11;
 }
 
 /** Generic */
